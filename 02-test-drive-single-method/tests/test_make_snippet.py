@@ -14,4 +14,4 @@ def test_with_exactly_5_words():
     
 def test_with_more_than_5_words():
     result = make_snippet("hello and welcome to the makers bootcamp")
-    assert result == "hello and welcome to..."
+    assert result == "hello and welcome to the..."
