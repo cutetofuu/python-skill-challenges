@@ -88,3 +88,18 @@ def test_chunk_resets_and_returns_first_contents_chunk():
     entry.reading_chunk(2, 2)
     entry.reading_chunk(2, 2)
     assert entry.reading_chunk(2, 2) == "Hi there and welcome"
+
+"""
+Given an entry with 12 words, 2 wpm
+and an available reading time of 2 minutes
+#reading_chunk called out four times
+goes back to the beginning
+and returns the first chunk of the contents 
+that the user was able to read
+"""
+def test_chunk_resets_and_returns_first_contents_chunk_given_12_words():
+    entry = DiaryEntry("Title 1", "Hi there and welcome to Makers! This is yet another diary entry.")
+    entry.reading_chunk(2, 2)
+    entry.reading_chunk(2, 2)
+    entry.reading_chunk(2, 2)
+    assert entry.reading_chunk(2, 2) == "Hi there and welcome"
