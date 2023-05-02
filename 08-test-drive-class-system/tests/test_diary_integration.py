@@ -13,7 +13,7 @@ def test_returns_list_with_an_entry_given_one_entry():
 
 """
 Given two diary entries
-#all returns a list with the diary entry
+#all returns a list with the diary entries
 """
 def test_returns_list_with_two_entries_given_two_entries():
     diary = Diary()
