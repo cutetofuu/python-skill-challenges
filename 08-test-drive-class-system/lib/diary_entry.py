@@ -2,8 +2,11 @@ import math
 
 class DiaryEntry:
     def __init__(self, title, contents):
-        self.title = title
-        self.contents = contents
+        if title == "" or contents == "":
+            raise Exception("You haven't submitted a diary entry.")
+        else:
+            self.title = title
+            self.contents = contents
         self._chunk_counter = 0
 
     def count_words(self):

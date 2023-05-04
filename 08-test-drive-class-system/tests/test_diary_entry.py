@@ -1,4 +1,15 @@
+import pytest
 from lib.diary_entry import DiaryEntry
+
+"""
+Given an empty string for title and contents
+Raises an error
+"""
+def test_raises_error_given_empty_string():
+    with pytest.raises(Exception) as err:
+        entry = DiaryEntry("", "")
+    error_message = str(err.value)
+    assert error_message == "You haven't submitted a diary entry."
 
 """
 When an entry has been created
